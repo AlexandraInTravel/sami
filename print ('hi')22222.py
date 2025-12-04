@@ -47,22 +47,21 @@ print ("Сторона, описанного около окружности п�
 
 
 
-n=int(input("Введите количество элементов списка от 1 до: "))   
-def exchanges(arr):
-    if len(arr)==1:
-        return [arr] 
+def ex(p):
+    if len(p)==1:
+        return [p] 
     else:
-        a=arr[0] 
-        p=exchanges(arr[1:]) 
-        r=[]  
-        for pp in p: 
-            for i in range(len(pp)):
-                tmp=pp[0:i]+[a]+pp[i:]
-                r.append(tmp)
-            r.append(pp+[a])    
-        return r
-       
-print(exchanges([i for i in range(1,n+1)]))
+        a=p[0] 
+        b=ex(p[1:]) 
+        c=[]  
+        for spis in b: 
+            for i in range(len(spis)):
+                aaa=[0:i]+[a]+spis[i:]
+                c.append(aaa)
+            c.append(spis+[a])    
+        return c
+n=int(input("Введите несколько чисел для списка: "))         
+print(ex([i for i in range(1,n+1)]))
 
 
 
