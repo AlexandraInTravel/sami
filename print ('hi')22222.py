@@ -47,21 +47,7 @@ print ("Сторона, описанного около окружности п�
 
 
 
-def ex(p):
-    if len(p)==1:
-        return [p] 
-    else:
-        a=p[0] 
-        b=ex(p[1:]) 
-        c=[]  
-        for spis in b: 
-            for i in range(len(spis)):
-                aaa=[0:i]+[a]+spis[i:]
-                c.append(aaa)
-            c.append(spis+[a])    
-        return c
-n=int(input("Введите несколько чисел для списка: "))         
-print(ex([i for i in range(1,n+1)]))
+
 
 
 
@@ -73,6 +59,7 @@ def ev(a,b):
     else:
         return ev(b, a%b)
 a=int ()
+
 
 
 
