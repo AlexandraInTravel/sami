@@ -67,4 +67,14 @@ print(ex([i for i in range(1,n+1)]))
 
 
 
+def ev(a,b):
+    if b=0
+        return a
+    else:
+        return ev(b, a%b)
+a=int ()
+
+
+
+
 
