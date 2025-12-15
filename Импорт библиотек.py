@@ -78,4 +78,59 @@ def main():
 
 
 if __name__=='__main__':
+
     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = input("Введите несколько чисел: ").split()
+b = list(map(lambda x: int(x), a))
+c = list(filter(lambda x: (x%2)==1, b))
+print(c)
+
+
+from functools import reduce
+current_list = [5, 15, 20, 30, 50, 55, 75, 60, 70]
+summa = reduce((lambda x, y: x + y), current_list)
+print(summa)
+
+#списковое включение
+tables = [lambda x = x: x*10 for x in range(1, 11)]
+for table in tables:
+    print(table())
+
+
+#лямбда и множественные операторы
+current_list = [[10,6,9],[0, 14, 16, 80],[8, 12, 30, 44]]
+sorted_list = lambda x: (sorted(i) for i in x)
+second_largest = lambda x, func: [y[len(y)-2] for y in func(x)]
+result = second_largest(current_list, sorted_list)
+print(result)
+
+
+def sum_digits(l):
+      l = input()
+      sum = 0 
+      for digit in str(l):
+           sum += int(digit)
+      return sum 
+print(sum_digits(sum))
+
+
+#лямбда и условные операторы
+max_number = lambda a, b: a if a > b else b
+print(max_number(3, 5))
