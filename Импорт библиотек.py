@@ -143,3 +143,4 @@ c = list(map(lambda x: int(x), b))
 d = list(map(lambda x: (x^2), c))
 print(d)
 
+
