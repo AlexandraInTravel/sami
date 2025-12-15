@@ -134,3 +134,12 @@ print(sum_digits(sum))
 #лямбда и условные операторы
 max_number = lambda a, b: a if a > b else b
 print(max_number(3, 5))
+
+
+
+a = input("Введите несколько чисел: ").split()
+b = a[1::2]
+c = list(map(lambda x: int(x), b))
+d = list(map(lambda x: (x^2), c))
+print(d)
+
