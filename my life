@@ -1,0 +1,33 @@
+class Subjects:
+    def __init__(self, name):
+        self.name = name
+
+    def Sub(self):
+        print(f"{self.name} смогу просидеть (с ТРУДОМ)")
+
+class Math(Subjects):
+    def Algebra(self):
+        print(f"{self.name} просидеть смогу")
+
+    def Matan(self):
+        print(f"{self.name} уже теперь намного лучше")
+
+
+class Nomaths(Subjects):
+    def FP(self):
+        print(f"{self.name} думаю, что будет интересно (Я выживу)")
+
+    def ET(self):
+        print(f"{self.name} пока что сойдет")
+
+Algebra_1 = Math("Алгебру")
+Matan_1 = Math("Матанализ")
+FP_1 = Nomaths("на ФП")
+ET_1 = Nomaths("Эконом теория")
+Subjects_1 = Subjects("На любой паре")
+
+Algebra_1.Algebra()
+Matan_1.Matan()
+FP_1.FP()
+ET_1.ET()
+Subjects_1.Sub()
